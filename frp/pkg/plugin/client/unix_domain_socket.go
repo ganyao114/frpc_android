@@ -39,6 +39,7 @@ func NewUnixDomainSocketPlugin(params map[string]string) (p Plugin, err error) {
 		return
 	}
 
+    unixPath = strings.Replace(unixPath, "@", "\x00", -1)
 	unixAddr, errRet := net.ResolveUnixAddr("unix", unixPath)
 	if errRet != nil {
 		err = errRet
