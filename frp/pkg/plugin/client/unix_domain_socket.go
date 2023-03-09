@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"io"
 	"net"
-
+    "strings"
 	frpIo "github.com/fatedier/golib/io"
 )
 
